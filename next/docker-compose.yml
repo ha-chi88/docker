@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  next:
+    build: ./docker/next.dockerfile
+    image: next
+    container_name: next
+    volumes:
+      - ./:/usr/src/app
+    command: sh -c 'cd next-app && yarn run dev'
+    ports:
+      - '3000:3000'

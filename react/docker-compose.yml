@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  react:
+    build: ./docker/react.dockerfile
+    image: react
+    container_name: react
+    volumes:
+      - ./:/usr/src/app
+    command: sh -c 'cd react-app && npm start'
+    ports:
+      - '3000:3000'
