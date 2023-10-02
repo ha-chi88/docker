@@ -2,7 +2,9 @@ version: '3'
 
 services:
   mysql:
-    build: ./docker/mysql.dockerfile
+    build:
+      context: ./docker
+      dockerfile: mysql.dockerfile
     image: mysql
     container_name: mysql
     volumes:

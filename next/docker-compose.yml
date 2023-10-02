@@ -2,7 +2,9 @@ version: '3'
 
 services:
   next:
-    build: ./docker/next.dockerfile
+    build:
+      context: ./docker
+      dockerfile: next.dockerfile
     image: next
     container_name: next
     volumes:

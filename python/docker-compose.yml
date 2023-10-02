@@ -1,0 +1,10 @@
+version: '3'
+services:
+  python:
+    build: .
+    image: python
+    container_name: python
+    volumes:
+      - ./src:/src
+    tty: true
+    stdin_open: true

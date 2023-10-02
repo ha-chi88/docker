@@ -1,0 +1,4 @@
+FROM python:3.9.18-slim-bullseye
+WORKDIR /src
+COPY ./requirements.txt /
+RUN apt update && pip install --upgrade pip && pip install -r /requirements.txt

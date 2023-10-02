@@ -2,7 +2,9 @@ version: '3'
 
 services:
   go:
-    build: ./docker/go.dockerfile
+    build:
+      context: ./docker
+      dockerfile: go.dockerfile
     image: go
     container_name: go
     tty: true
